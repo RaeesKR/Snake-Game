@@ -16,7 +16,7 @@ const nextLevelBtn = document.getElementById("nextLevelBtn");
 // ======================
 let food = generateFood();
 
-let time = 60;
+let time = 120;
 // ======================
 // SCORE
 // ======================
