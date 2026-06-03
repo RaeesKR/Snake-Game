@@ -1,19 +1,30 @@
-body{
-text-align:center;
-font-family:Arial;
+body {
+  text-align: center;
+  font-family: Arial;
 }
-canvas{
-border:2px solid black;
-background:#eee;
+canvas {
+  border: 2px solid black;
+  background: #eee;
 }
-#levelPanel{
-margin-top:20px;
+#levelPanel {
+  margin-top: 20px;
 }
-.hidden{
-display:none;
+.hidden {
+  display: none;
 }
-button{
-padding:10px 20px;
-font-size:16px;
-cursor:pointer;
+button {
+  padding: 10px 20px;
+  font-size: 16px;
+  cursor: pointer;
+}
+
+/* dialog info */
+#infoDialog {
+  border-radius: 10px;
+  padding: 20px;
+  border: none;
+  outline: none;
+  box-shadow: 13px 2px 81px -12px rgba(98, 116, 98, 0.75);
+  -webkit-box-shadow: 13px 2px 81px -12px rgba(98, 116, 98, 0.75);
+  -moz-box-shadow: 13px 2px 81px -12px rgba(98, 116, 98, 0.75);
 }
