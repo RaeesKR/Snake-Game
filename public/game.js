@@ -11,6 +11,18 @@ const levelText = document.getElementById("levelText");
 const scoreText = document.getElementById("scoreText");
 const nextLevelBtn = document.getElementById("nextLevelBtn");
 
+// get id dom js
+const infoDialog = document.getElementById("infoDialog");
+const buttonMulaiGame = document.getElementById("mulaiGame");
+
+// load Game
+window.onload = () => {
+  infoDialog.showModal();
+};
+
+buttonMulaiGame.addEventListener("click", () => {
+  infoDialog.close();
+});
 // ======================
 // FOOD
 // ======================
