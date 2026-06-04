@@ -12,17 +12,26 @@ const scoreText = document.getElementById("scoreText");
 const nextLevelBtn = document.getElementById("nextLevelBtn");
 
 // get id dom js
-const infoDialog = document.getElementById("infoDialog");
-const buttonMulaiGame = document.getElementById("mulaiGame");
+const rulesDialog = document.getElementById("rulesDialog");
+const controlsDialog = document.getElementById("controlsDialog");
+const buttonNextInfo = document.getElementById("buttonNextInfo");
+const buttonMulaiGame = document.getElementById("buttonMulaiGame");
 
 // load Game
 window.onload = () => {
-  infoDialog.showModal();
+  rulesDialog.showModal();
 };
 
-buttonMulaiGame.addEventListener("click", () => {
-  infoDialog.close();
+buttonNextInfo.addEventListener("click", () => {
+  rulesDialog.close();
+  controlsDialog.showModal();
 });
+
+buttonMulaiGame.addEventListener("click", () => {
+  controlsDialog.close();
+  gameLoop();
+}); 
+
 // ======================
 // FOOD
 // ======================
@@ -269,7 +278,3 @@ setInterval(() => {
   }
 }, 1000);
 
-// ======================
-// START GAME
-// ======================
-gameLoop();

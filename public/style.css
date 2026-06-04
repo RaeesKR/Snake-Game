@@ -19,12 +19,45 @@ button {
 }
 
 /* dialog info */
-#infoDialog {
+#rulesDialog , #controlsDialog {
   border-radius: 10px;
+  text-align: left;
   padding: 20px;
   border: none;
   outline: none;
   box-shadow: 13px 2px 81px -12px rgba(98, 116, 98, 0.75);
   -webkit-box-shadow: 13px 2px 81px -12px rgba(98, 116, 98, 0.75);
   -moz-box-shadow: 13px 2px 81px -12px rgba(98, 116, 98, 0.75);
+}
+
+#buttonMulaiGame {
+  background-color: #008CBA;
+  color: white;
+  border: none;
+  border-radius: 5px;
+}
+
+#buttonNextInfo {
+  background-color: #008CBA;
+  color: white;
+  border: none;
+  border-radius: 5px;
+}
+
+.button-container {
+  display: flex;
+  justify-content: center;
+  width: 100%;
+}
+
+.controls-container {
+  display: flex;
+  flex-direction: row;
+  gap: 100px;
+  justify-content: center;
+  align-items: center;
+}
+
+.info-header {
+  text-align: center;
 }

@@ -14,16 +14,47 @@
       <button id="nextLevelBtn">Mulai Level Selanjutnya</button>
     </div>
     
-    <dialog id="infoDialog">
-      <h2>Information:</h2>
-      <p>WASD untuk Player 1 (Ular Hijau)</p>
-      <p>Arrow Keys untuk Player 2 (Ular Biru)</p>
-      <p>Kumpulkan makanan untuk mendapatkan poin.</p>
-      <p>Hindari menabrak tubuh sendiri/lawan (Level Easy-Medium)</p>
-      <p>Hindari menabrak dinding (Level Hard)</p>
-
-      <button id="mulaiGame">Mulai Game</button>
+    <dialog id="rulesDialog">
+      <div class="info-header">
+          <h2>Peraturan Permainan</h2>
+        </div>
+      <ol>
+        <li>Kumpulkan poin terbanyak atau hadang lawan untuk menang!</li>
+        <li>Easy (30 poin): Hindari menabrak tubuh sendiri/lawan</li>
+        <li>Medium (50 poin): Hindari menabrak tubuh sendiri/lawan</li>
+        <li>Hard (75 poin): Hindari menabrak tubuh sendiri/lawan dan dinding</li>
+      </ol>
+      <div class="button-container">
+        <button id="buttonNextInfo">Next</button>
+      </div>
     </dialog>
+
+      <dialog id="controlsDialog">
+        <div class="info-header">
+          <h2>Kontrol</h2>
+        </div>
+        <div class="controls-container">
+          <div>
+            <div class="info-player">
+              <h3>Player 1</h3>
+            </div>
+            <p>W = Atas</p>
+            <p>A = Kiri</p>
+            <p>S = Bawah</p>
+            <p>D = Kanan</p>
+          </div>
+          <div>
+            <h3>Player 2</h3>
+            <p>↑ = Atas</p>
+            <p>← = Kiri</p>
+            <p>↓ = Bawah</p>
+            <p>→ = Kanan</p>
+          </div>
+        </div>
+        <div class="button-container">
+          <button id="buttonMulaiGame">Mulai Game</button>
+        </div>
+      </dialog>
 
     <script src="./public/fungsiPlayer.js"></script>
 
