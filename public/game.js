@@ -10,6 +10,9 @@ const levelPanel = document.getElementById("levelPanel");
 const levelText = document.getElementById("levelText");
 const scoreText = document.getElementById("scoreText");
 const nextLevelBtn = document.getElementById("nextLevelBtn");
+const scoreP1 = document.getElementById("scoreP1");
+const scoreP2 = document.getElementById("scoreP2");
+const levelDisplay = document.getElementById("levelDisplay");
 
 // get id dom js
 const rulesDialog = document.getElementById("rulesDialog");
@@ -68,11 +71,15 @@ function generateFood() {
 // DRAW SCORE
 // ======================
 function drawScore() {
-  ctx.fillStyle = "black";
-  ctx.font = "16px Arial";
-  ctx.fillText(`${Player1.name}: ${Player1.score}`, 10, 20);
-  ctx.fillText(`${Player2.name}: ${Player2.score}`, 710, 20);
-  ctx.fillText("Level : " + level, 350, 20);
+  scoreP1.innerText = `${Player1.name}: ${Player1.score}`;
+  scoreP2.innerText = `${Player2.name}: ${Player2.score}`;
+  levelDisplay.innerText = `Level : ${level}`;
+
+  // ctx.fillStyle = "black";
+  // ctx.font = "16px Arial";
+  // ctx.fillText(`${Player1.name}: ${Player1.score}`, 10, 20);
+  // ctx.fillText(`${Player2.name}: ${Player2.score}`, 710, 20);
+  // ctx.fillText("Level : " + level, 350, 20);
 }
 
 // DRAW TIMER
@@ -137,7 +144,8 @@ const P2_CONTROLS = {
 // UPDATE LEVEL
 // ======================
 function updateLevel() {
-  let currentHighest = Math.max(Player1.score, Player2.score); // EASY
+  let currentHighest = Math.max(Player1.score, Player2.score); 
+  // EASY
   if (currentHighest <= 25) {
     if (level !== "Easy") {
       showLevelTransition("Easy");
@@ -205,7 +213,7 @@ window.addEventListener("keydown", (event) => {
 const Player1 = new Player(
   "Player 1",
   [
-    { x: 200, y: 200 },
+    { x: 200, y: 250 },
     { x: 180, y: 200 },
   ],
   "green",
@@ -215,13 +223,15 @@ const Player1 = new Player(
 const Player2 = new Player(
   "Player 2",
   [
-    { x: 100, y: 100 },
+    { x: 600, y: 100 },
     { x: 120, y: 100 },
   ],
   "blue",
   ctx,
   canvas,
 );
+Player2.dx = -20;  // Menghadap kiri
+Player2.dy = 0;
 
 // ======================
 // GAME LOOP

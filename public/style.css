@@ -1,10 +1,13 @@
 body {
   text-align: center;
   font-family: Arial;
+  background-color: grey;
 }
 canvas {
-  border: 2px solid black;
+  border: 10px solid rgb(0, 255, 106);
+  border-radius: 10px;
   background: #eee;
+  background-color: black;
 }
 #levelPanel {
   margin-top: 20px;
@@ -60,4 +63,28 @@ button {
 
 .info-header {
   text-align: center;
+}
+
+#scoreP1 {
+  color: white;
+  background-color: green;
+  border: 2px solid black;
+  position: fixed;
+  left: 77px;
+  top: 70px;
+}
+
+#scoreP2 {
+  color: white;
+  background-color: blue;
+  border: 2px solid black;
+  position: fixed;
+  right: 77px;
+  top: 70px;
+}
+
+#levelDisplay {
+  font-size: 20px;
+  font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+  
 }
