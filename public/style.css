@@ -69,22 +69,15 @@ button {
   color: white;
   background-color: green;
   border: 2px solid black;
-  position: fixed;
-  left: 77px;
-  top: 70px;
 }
 
 #scoreP2 {
   color: white;
   background-color: blue;
   border: 2px solid black;
-  position: fixed;
-  right: 77px;
-  top: 70px;
 }
 
 #levelDisplay {
   font-size: 20px;
   font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
-  
 }

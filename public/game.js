@@ -84,7 +84,7 @@ function drawScore() {
 
 // DRAW TIMER
 function drawTimer() {
-  ctx.fillStyle = "black";
+  ctx.fillStyle = "white";
 
   ctx.font = "16px Arial";
 
