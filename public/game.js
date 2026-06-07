@@ -33,7 +33,7 @@ buttonNextInfo.addEventListener("click", () => {
 buttonMulaiGame.addEventListener("click", () => {
   controlsDialog.close();
   gameLoop();
-}); 
+});
 
 // ======================
 // FOOD
@@ -144,7 +144,7 @@ const P2_CONTROLS = {
 // UPDATE LEVEL
 // ======================
 function updateLevel() {
-  let currentHighest = Math.max(Player1.score, Player2.score); 
+  let currentHighest = Math.max(Player1.score, Player2.score);
   // EASY
   if (currentHighest <= 25) {
     if (level !== "Easy") {
@@ -213,7 +213,7 @@ window.addEventListener("keydown", (event) => {
 const Player1 = new Player(
   "Player 1",
   [
-    { x: 200, y: 250 },
+    { x: 200, y: 240 },
     { x: 180, y: 200 },
   ],
   "green",
@@ -224,13 +224,13 @@ const Player2 = new Player(
   "Player 2",
   [
     { x: 600, y: 100 },
-    { x: 120, y: 100 },
+    { x: 620, y: 100 },
   ],
   "blue",
   ctx,
   canvas,
 );
-Player2.dx = -20;  // Menghadap kiri
+Player2.dx = -20; // Menghadap kiri
 Player2.dy = 0;
 
 // ======================
@@ -287,4 +287,3 @@ setInterval(() => {
     }
   }
 }, 1000);
-
