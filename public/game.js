@@ -13,6 +13,7 @@ const nextLevelBtn = document.getElementById("nextLevelBtn");
 const scoreP1 = document.getElementById("scoreP1");
 const scoreP2 = document.getElementById("scoreP2");
 const levelDisplay = document.getElementById("levelDisplay");
+const buttonRestart = document.getElementById("buttonRestart")
 
 // get id dom js
 const rulesDialog = document.getElementById("rulesDialog");
@@ -33,6 +34,10 @@ buttonNextInfo.addEventListener("click", () => {
 buttonMulaiGame.addEventListener("click", () => {
   controlsDialog.close();
   gameLoop();
+});
+
+buttonRestart.addEventListener("click", () => {
+  resetGame();
 });
 
 // ======================
@@ -126,6 +131,38 @@ function drawGameOver() {
 
   // reset align
   ctx.textAlign = "start";
+}
+
+function resetGame() {
+  gameOver = false;
+  pauseLevel = false;
+  time = 120;
+  winner = "";
+  level = "Easy";
+  gameSpeed = 250;
+  food = generateFood();
+
+  Player1.score = 0;
+  Player2.score = 0;
+  Player1.growing = false;
+  Player2.growing = false;
+  Player1.snake = [
+    { x: 200, y: 240 },
+    { x: 180, y: 200 },
+  ];
+  Player2.snake = [
+    { x: 600, y: 100 },
+    { x: 620, y: 100 },
+  ];
+  Player1.dx = 20;
+  Player1.dy = 0;
+  Player2.dx = -20;
+  Player2.dy = 0;
+
+  levelPanel.classList.add("hidden");
+  drawScore();
+  drawTimer();
+  gameLoop();
 }
 const P1_CONTROLS = {
   up: "KeyW",
