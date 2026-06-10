@@ -13,7 +13,6 @@ const nextLevelBtn = document.getElementById("nextLevelBtn");
 const scoreP1 = document.getElementById("scoreP1");
 const scoreP2 = document.getElementById("scoreP2");
 const levelDisplay = document.getElementById("levelDisplay");
-const buttonRestart = document.getElementById("buttonRestart")
 
 // get id dom js
 const rulesDialog = document.getElementById("rulesDialog");
@@ -36,9 +35,6 @@ buttonMulaiGame.addEventListener("click", () => {
   gameLoop();
 });
 
-buttonRestart.addEventListener("click", () => {
-  resetGame();
-});
 
 // ======================
 // FOOD
@@ -55,7 +51,7 @@ let winner = "";
 // ======================
 // LEVEL
 // ======================
-let level = "Easy";
+let level = "Lambat";
 // speed game
 let gameSpeed = 250;
 // pause level
@@ -138,7 +134,7 @@ function resetGame() {
   pauseLevel = false;
   time = 120;
   winner = "";
-  level = "Easy";
+  level = "Lambat";
   gameSpeed = 250;
   food = generateFood();
 
@@ -182,40 +178,40 @@ const P2_CONTROLS = {
 // ======================
 function updateLevel() {
   let currentHighest = Math.max(Player1.score, Player2.score);
-  // EASY
+  // LAMBAT
   if (currentHighest <= 25) {
-    if (level !== "Easy") {
-      showLevelTransition("Easy");
+    if (level !== "Lambat") {
+      showLevelTransition("Lambat");
     }
-    level = "Easy";
+    level = "Lambat";
     gameSpeed = 200;
   } else if (currentHighest <= 50) {
-    // MEDIUM
-    if (level !== "Medium") {
-      showLevelTransition("Medium");
+    // CEPAT
+    if (level !== "Cepat") {
+      showLevelTransition("Cepat");
     }
-    level = "Medium";
+    level = "Cepat";
     gameSpeed = 150;
   } else if (currentHighest <= 75) {
-    // HARD
-    if (level !== "Hard") {
-      showLevelTransition("Hard");
+    // SANGAT CEPAT
+    if (level !== "Sangat Cepat") {
+      showLevelTransition("Sangat Cepat");
     }
-    level = "Hard";
+    level = "Sangat Cepat";
     gameSpeed = 100;
   } else if (currentHighest <= 100) {
-    // Crazy
-    if (level !== "Crazy") {
-      showLevelTransition("Crazy");
+    // SUPER CEPAT
+    if (level !== "Super Cepat") {
+      showLevelTransition("Super Cepat");
     }
-    level = "Crazy";
+    level = "Super Cepat";
     gameSpeed = 50;
-  } else // Impossible
+  } else // SUPER DUPER CEPAT
   {
-    if (level !== "Impossible") {
-      showLevelTransition("Impossible");
+    if (level !== "Super Duper Cepat") {
+      showLevelTransition("Super Duper Cepat");
     }
-    level = "Impossible";
+    level = "Super Duper Cepat";
     gameSpeed = 30;
   }
 }

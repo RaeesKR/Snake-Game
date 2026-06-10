@@ -31,7 +31,7 @@ class Player {
       y: this.snake[0].y + this.dy,
     };
 
-    if (level !== "Hard" && level !== "Crazy" && level !== "Impossible") {
+    if (level !== "Sangat Cepat" && level !== "Super Cepat" && level !== "Super Duper Cepat") {
       if (head.x >= this.canvas.width) head.x = 0;
       if (head.x < 0) head.x = this.canvas.width - 20;
 
@@ -48,14 +48,15 @@ class Player {
     }
 
     return false;
-  } // ======================
-
+  } 
+  
+  // ======================
   // COLLISION BODY
   // ======================
   checkCollision(enemySnake = []) {
     const head = this.snake[0];
 
-    if (level === "Hard" || level === "Crazy" || level === "Impossible") {
+    if (level === "Sangat Cepat" || level === "Super Cepat" || level === "Super Duper Cepat") {
       if (
         head.x < 0 ||
         head.x >= this.canvas.width ||
